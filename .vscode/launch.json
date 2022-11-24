@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+ 
+    {
+    "name": "c/c++ Launch",
+    "type": "lldb",
+    "request": "launch",
+    "program": "${workspaceFolder}/out/${fileBasenameNoExtension}",//我把生成的文件放 
+                             //在了out这个目录，方便清理，如果要用的话，记得建一个out文件夹。
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "environment": [], 
+    "externalConsole":false,
+    "MIMode": "lldb",
+    "preLaunchTask":"c"
+    }
+    ]
+    }
