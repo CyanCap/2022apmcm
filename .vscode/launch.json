@@ -1,20 +1,50 @@
 {
-    "version": "0.2.0",
-    "configurations": [
- 
+  "version": "0.2.0",
+  "configurations": [
     {
-    "name": "c/c++ Launch",
-    "type": "lldb",
-    "request": "launch",
-    "program": "${workspaceFolder}/out/${fileBasenameNoExtension}",//我把生成的文件放 
-                             //在了out这个目录，方便清理，如果要用的话，记得建一个out文件夹。
-    "args": [],
-    "stopAtEntry": false,
-    "cwd": "${workspaceFolder}",
-    "environment": [], 
-    "externalConsole":false,
-    "MIMode": "lldb",
-    "preLaunchTask":"c"
+      "name": "(Windows) Launch",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "cmd",
+      "preLaunchTask": "echo",
+      "args": [
+        "/C",
+        "${workspaceFolder}/exe/${fileBasenameNoExtension}.exe",
+        "&",
+        "echo.",
+        "&"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true
+    },
+    {
+      "name": "(gdb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/exe/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "E:\\mingw64\\bin\\gdb.exe",
+      "preLaunchTask": "echo",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "type": "node-terminal",
+      "name": "JavaScript Debug Terminal",
+      "request": "launch",
+      "cwd": "${workspaceFolder}"
     }
-    ]
-    }
+  ]
+}
