@@ -68,23 +68,34 @@ for i in range(0, int(len(valm) / 12)):
 for i in range(3264, 3274):
     valmj.append(valm[i])
 
-wb = xlwt.Workbook
-ws = wb.add_sheet('std data')
+wb = xlwt.Workbook()
+ws = wb.add_sheet('std month data')
 ws.write(0, 0, 'std data')
-for
+for i in range(1, h-1):
+    ws.write(i, 0, valm[i]);
 
-print(valmj)
-plt.figure(1)
-plt.title('Average monthly temperature in 2022')
-plt.xlabel('month')
-plt.ylabel('temperature')
-plt.plot(mr, valmj)
-plt.savefig("./fig/Average monthly temperature in 2022.jpg")
+wb.save('../land month std data.xls')
 
-plt.figure(2)
-plt.title('The annual average temperature')
-plt.xlabel('year')
-plt.ylabel('temperature')
-plt.plot(yr, valy)
-plt.savefig("./fig/The annual average temperature.jpg")
-plt.show()
+wb = xlwt.Workbook()
+ws = wb.add_sheet('std year avg data')
+ws.write(0, 0, 'std data')
+for i in range(1, len(valy)):
+    ws.write(i, 0, valy[i])
+
+wb.save('../land year std data.xls')
+
+# print(valmj)
+# plt.figure(1)
+# plt.title('Average monthly temperature in 2022')
+# plt.xlabel('month')
+# plt.ylabel('temperature')
+# plt.plot(mr, valmj)
+# plt.savefig("./fig/Average monthly temperature in 2022.jpg")
+#
+# plt.figure(2)
+# plt.title('The annual average temperature')
+# plt.xlabel('year')
+# plt.ylabel('temperature')
+# plt.plot(yr, valy)
+# plt.savefig("./fig/The annual average temperature.jpg")
+# plt.show()
