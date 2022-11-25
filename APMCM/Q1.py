@@ -32,7 +32,9 @@
 
 import csv
 import pandas as pd
-
+import xlrd
+import xlwt
+import openpyxl
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import font_manager
@@ -65,6 +67,11 @@ for i in range(0, int(len(valm) / 12)):
 
 for i in range(3264, 3274):
     valmj.append(valm[i])
+
+wb = xlwt.Workbook
+ws = wb.add_sheet('std data')
+ws.write(0, 0, 'std data')
+for
 
 print(valmj)
 plt.figure(1)
