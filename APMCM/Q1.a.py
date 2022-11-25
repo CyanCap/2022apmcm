@@ -99,3 +99,5 @@ wb.save('../land year std data.xls')
 # plt.plot(yr, valy)
 # plt.savefig("./fig/The annual average temperature.jpg")
 # plt.show()
+
+# git remote set-url origin https://<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>@github.com/CyanCap/2022apmcm.git
