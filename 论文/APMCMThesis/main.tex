@@ -132,7 +132,7 @@ The picture about annual average temperature between 1760 to 2022 is the followi
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{annual avg tem.jpg}
-  \caption*{picture 1}\label{fig1}
+  \caption{picture 1}\label{fig1}
 \end{figure}
 
 Then we get the average temperature in March between 2011 to 2021 is the following. 
@@ -144,7 +144,7 @@ Then we get the average temperature in March between 2011 to 2021 is the followi
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.2]{past 10 avg.jpg}
-  \caption*{picture 2}\label{fig2}
+  \caption{picture 2}\label{fig2}
 \end{figure}
 
 The total increasing rate is 1.100\%, and increase 0.606\oc in value.
@@ -161,7 +161,7 @@ And the monthly average temperature between January 2022 to October 2022 except 
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.35]{Average monthly temperature in 2022.jpg}
-  \caption*{picture 3}\label{fig3}
+  \caption{picture 3}\label{fig3}
 \end{figure}
 
 Especially, the increasing rate between 2022 to 2021 is 0.0192.
@@ -173,9 +173,9 @@ This is much smaller than previous 10 years.
 Question (b) require us to build 2 or more mathematical models to describe the past and predict the future global temperature level.
 We can pick a observation as example to analyze the data annually. 
 That is we build models using yearly average temperature. 
-We decide to use Autoregressive integrated moving average (ARIMA) model and Gray forecast model(GFM) to describe the global temperature.
+We decide to use Autoregressive integrated moving average (ARIMA) model and long short term memory algorithm(LSTM) to describe the global temperature.
 
-\subsubsection{Model 1: SARIMA}
+\subsubsection{Model 1: ARIMA}
 
 ARIMA model, differential integrated moving average autoregression model, also known as integrated moving average autoregression model, 
 is one of the time series prediction and analysis methods.
@@ -227,6 +227,7 @@ We can check the autocorrelation function(ACF):
   ACF(k)=\rho_k = \frac{Cov(y_t,y_{t-k})}{Var(y_t)}.
 \end{align*}
 k is the lagged index.
+
 We calculate the statistic ACF and plot a scatter so that we can really determine which model is the better one.
 
 After we get the annual average temperature, we first perform a stationarity check on the data. The most intuitive way is to use the data to make a sequence diagram and then observe the trend of the image. At the same time, we calculate the first-order difference and the second-order difference of the data and make a graph to observe the trend.
@@ -234,7 +235,7 @@ After we get the annual average temperature, we first perform a stationarity che
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.35]{Smoothness Analysis.png}
-  \caption*{picture 4}\label{fig5}
+  \caption{picture 4}\label{fig5}
 \end{figure}
 
 It is not obvious from the image to confirm the stationary relationship of the data, so we use the mathematical test method——ADF test and KPSS test.
@@ -246,67 +247,132 @@ From the test result we can know the raw data is not stationary, so we need to c
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[scale=0.5]{order 1.png}
-    \caption*{picture 5}
+    \caption{picture 5}
   \end{minipage}%
   \begin{minipage}[t]{0.45\linewidth}
     \centering
     \includegraphics[scale=0.5]{order 2.png}
-    \caption*{picture 6}
+    \caption{picture 6}
   \end{minipage}
 \end{figure}
 
-Therefore, the data after the first order difference can be used for time series modeling analysis. And then what we need to do is to confirm the parameters p q d. The first step is to examine the autocorrelation and partial autocorrelation plots of a stationary time series.
+Therefore, the data after the first order difference can be used for time series modeling analysis. And then what we need to do is to confirm the parameters (p, q, d). The first step is to examine the autocorrelation and partial autocorrelation plots of a stationary time series.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{ACF.png}
-  \caption*{picture 7}\label{fig7}
+  \caption{picture 7}\label{fig7}
 \end{figure}
 
-We can't get the values of p and q from the figure, so we adopt the AIC and BIC criteria to find the most suitable p and q values within a certain range. When we have confirmed the appropriate p q d value, we can build a model to predict the subsequent data. In the process of forecasting, we also set the upper and lower forecast limits under the 95% confidence interval.
+We can't get the values of p and q from the figure, so we adopt the AIC and BIC criteria to find the most suitable p and q values within a certain range. When we have confirmed the appropriate (p, q, d) value, we can build a model to predict the subsequent data. In the process of forecasting, we also set the upper and lower forecast limits under the 95\% confidence interval.
+
+Finally we get that the best combination of p, q is:
+\begin{align*}
+  p=3,\;\;q=2
+\end{align*}
+
+\subsubsection{Model 2: LSTM}
+
+The recurrent neural network has memory, parameter sharing and Turing completeness, so it has certain accuracy and advantages to select the recurrent neural network for learning and prediction.
+
+LSTM, a short - and long-term memory network, is used in this paper. LSTM is formed by a chain of repeated modules, each of which is called a cell (cell).
+
+Each cell has a specific gate structure to achieve selective information transmission. Through the transmission of LSTM gate structure (forgetting gate, input gate, cell state update, output gate) information, each cell state is updated.
+
+The function of Amnesia Gate is to selectively update the cell state. The first step of LSTM is to determine the cell status update.
+
+It uses the Sigmoid function to $h_{t-1} $and $x_t $ processing, outputting numbers between 0-1. 
+1 means completely reserved, while 0 means completely forgotten. Where $h_{t-1} $ is the weight matrix, $b_f$ is the offset term.
+
+\begin{align*}
+  f_t = \sigma (W_f \cdot [h_{t-1},\; x_t] + b_f)
+\end{align*}
+
+The function of the input gate is to input data and determine the information stored in the cell state.
+This part is divided into two steps. First, the Sigmaid layer determines the weight of the input information in the update, that is, which information needs to be updated.
+Next, build a candidate vector $\tilde{C_t}$ through tanh calculation at this time
+
+\begin{align*}
+  i_t &= \sigma (W_f \cdot [h_{t-1},\; x_t] + b_f)\\
+  \tilde{C_t}&= tanh(W_c \cdot [h_{t-1},\; x_t] + b_c)
+\end{align*}
+
+Next update the previous cell status $C_{t-1}$, add this matrix and the last cell state after the forgetting gate processing to form $C_t$.
+Multiply the previous state matrix by $f_t$, representing selective memory of the last cell state.
+Then we add $i_t\cdot \tilde{C_t} $ to the value we get  , the new cell state $C_t$ is obtained.
+
+\begin{align*}
+  C_t = f_t \cdot C_{t-1} + i_t \cdot \tilde{C_t}
+\end{align*}
+
+Finally, the output gate will output based on the current cell state, passing the current input data through the Sigmaid layer.
+Then pass the current cell state through the tanh layer, normalize the matrix between -1 and 1, and perform the basic product operation with the output of the sigmoid layer,
+So far, the data of the output part has been determined.
+
+\begin{align*}
+  o_t &= \sigma (W_f \cdot [h_{t-1},\; x_t] + b_o)\\
+  h_t &= o_t \cdot tanh (C_t)
+\end{align*}
+
+Through the module chain network composed of LSTM cell units,
+Be able to predict the future through continuous learning of input data.
+
+\subsection{(c)}
+
+According to the model in question 1(b), we can easily predict global temperatures in 2050 and 2100 respectively using different models. 
+Moreover we need to find when the average temperature of observation points in ous prediction models will reach 20.00\oc.
+
+\subsubsection{Result from model ARIMA}
 
 First, let's predict the annual average temperature for the next 100 years.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[scale=0.4]{ARIMA prediction 100.png}
-  \caption*{picture 8}\label{fig8}
+  \includegraphics[scale=0.45]{ARIMA prediction 100.png}
+  \caption{picture 8}\label{fig8}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{ARIMA prediction 1400.png}
-  \caption*{picture 9}\label{fig9}
+  \caption{picture 9}\label{fig9}
 \end{figure}
 
+From the predicted results, when it comes to 2050, the annual average temperature will reach 9.6147 \oc. when it comes to 2100, the annual average temperature will reach 9.9985 \oc.
 
-Then, we choose seasonal ARIMA to estimate the average global temperature.
-This is because we obtain only stable prediction by ARIMA, while ARIMA cannot estimate seasonal data well.
-So we do some extention to ARIMA, add a seasonal factor to ARIMA.
-That is:
-\begin{align*}
-  y_t = \mu + \sum^p_{i=1} \gamma_i y_{t-i}  + \sum^p_{i=1} \Gamma_i y_{t-is} + \sum^q_{i=1} \theta_i \epsilon_{t_i} +  \sum^q_{i=1} \Theta_i \epsilon_{t-is} +\epsilon_t
-\end{align*}
+Since 20 \oc has not been reached, we continue to extend the forecast range. We will predict until 1400 years later. We found that when the time comes to 3404 years , the annual average temperature in the world will reach 20.0075 \oc and exceed 20 \oc for the first time.
 
-We can find that it is the multiple of ARIMA and seasonal expression $s(p,q,d)$.
-This step does not be like obtaining ARIMA from ARMA, which just adds a differential operater d.
-It mulitply seasonal factor s to ARIMA to get SARIMA.
+\subsubsection{Result from model LSTM}
 
-\subsubsection{Model 2: }
-
-\subsubsection{Description of global temperature in recent 100 years}
-Using the models that we build in previous section, we draw the picture of past 50 years and future 50 years global temperature level.
-
- 
-
-
-\subsection{(c)}
-According to the model in question 1(b), we can easily predict global temperatures in 2050 and 2100 respectively using different models. 
-Moreover we need to find when the average temperature of observation points in ous prediction models will reach 20.00\oc.
 
 \subsection{(d)}
 We need to calculate important statistics to determine which model is better. 
 We compare SE, MSE and RMSE and draw a figure as the following.
+
+\subsubsection{Analysis of model ARIMA}
+
+Using method of statistics, we can get the following analysis of ARIMA(3,2,1).
+
+\begin{center}
+\begin{tabular}{c|cccc}
+  \hline
+   &Value& StandardError& TStatistic &PValue\\
+  \hline
+  Constant  &  0.0083569    &  0.0052983    &     1.5773    &    0.11473\\
+    AR{1}    &    -0.45471   &     0.15899  &        -2.86  &    0.0042368\\
+    AR{2}    &    0.27647    &   0.079342   &      3.4845   &  0.00049308\\
+    AR{3}    &  0.089483     &    0.0525    &     1.7044    &     0.0883\\
+    MA{1}   &     -0.14389   &     0.15508  &     -0.92784  &      0.35349\\
+    MA{2}    &    -0.63333   &     0.14147  &      -4.4768  &   7.5784e-06\\
+    Variance  &    0.10201   &   0.0054319  &        18.78  &   1.1057e-78\\
+  \hline
+  \end{tabular}
+\end{center}
+
+We can find that, most of the p-values are very small.
+So we can conclude that most of the coefficients are reliable except MA{1}.
+
+\subsubsection{Analysis of model LSTM}
 
 
 \section{Solution for question 2}
@@ -315,27 +381,125 @@ but also more other reasons such as position, time, volcanic eruptions, forest f
 
 \subsection{(a)}
 \subsubsection{Analysis of problem 2(a)}
-According to the data given in attachment 1, we analyze the correlation between  global temperature, time and location.
-Draw a heat map, and use ridge regression in multiple linear regression to describe the relationship between variable above.
-We decide to use Pearson correlation coefficient to describe the relationship between temperature, time and location.
-This is because the values of them do affect each other, and the order of temperature is an important factor that judge the relastionship. 
-Moreover, time temperature and location must satisfy some linear relationship, so we decide to use Pearson correlation coefficient to describe. 
+According to the data given in attachment 1, we analyze the correlation between global temperature, time and location.
+We can use multiple regression to describe the relationship between global temperature, time and location. 
 
-And we want to analyze further to prove the correctness of the relationship. 
-So we use Grey relation analysis(GRA) to make sure that they really have some relationship.
+\subsubsection{Relationship about location}
+We first analyze the relationship between latitude and temperature. 
+And we conclude that only latitude effects temperature by geometry.
+Since we only consider the relationship between latitude and temperature, so we can arbitary choose data in one year.
+We use different observation points to denote different latitude.
+Then we can get average temperature in 2010, for example, while every temperature represents different latitude. 
+And we draw a heat picture to describe the relationship.
 
-\subsubsection{Test of Pearson correlation coefficient}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.4]{position correlation.png}
+  \caption{position correlation}\label{fig10}
+\end{figure}
 
-\subsubsection{Test of Grey relation analysis}
+Moreover, we make a statistic table for regression model.
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.52]{2a table.png}
+  \caption{regression table}\label{fig11}
+\end{figure}
+
+We can see that p-value is small enough, so we can conclude that this model is good.
+And we conclude the relationship between temperature and location:
+\begin{align*}
+  Avgtemperature =-0.1565\cdot latitude+0.0131\cdot longitude + 22.4571.
+\end{align*}
+
+\subsubsection{Relationship about time}
+Then, we analyze the relationship between global average temperature and time.
+We choose one city Shanghai to analyze since we need to reduce the effect of location.
+So we pick several years monthly average temperature of Shanghai.
+And we divide every year as a period to use the seasonal statsmodel package.
+
+We can get the time series decomposition.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.5]{seasonal.png}
+  \caption{time series decomposition}\label{fig12}
+\end{figure}
+
+We find that the estimation and resident are almost stable, and the observed temperature data has very small increasing trend. 
+We need to confirm that time has no relationship to global temperature.
+
+Then we use augmented Dickey-Fuller test to judge if time factor is a noise for average temperature.
+We get that the p-value is 3.421929753273345e-10.
+So we claim that time has no relationship to global temperature.
 
 
 \subsection{(b)}
-\subsubsection{Data of natural disasters}
-In this section, we should get data of the natural disasters, we find part of data(such as volcanic eruptions, forest fires) in \url{https://www.emdat.be/}, and part of data(COVID-19) in \url{https://covid19.who.int/data}.
+In this section, we should get data of the natural disasters, we find part of data(such as volcanic eruptions, forest fires) in \url{https://www.emdat.be/} and part of data(COVID-19) in \url{https://covid19.who.int/data}.
 
+\subsubsection{Relationship analysis}
+In this section, we choose 2010 volcanic eruptions in Ayafara, Iceland to analyze the average temperature change of Iceland in 2010.
+We plot the average temperature of Iceland from January 2009 to December 2011.
 
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.45]{Iceland.png}
+  \caption{temperature of Iceland}\label{fig13}
+\end{figure}
 
+Eyjafjallajokull erupted on 20th March, 2010 first.
+Then it erupted on 14th April again.
+We want to discover if the eruption affected the local temperature. 
+
+Let's focus on the figure.
+We find that the avg temperature in 2010 is different to 2009 and 2011, which has abnormal value in February and March.
+The temperature in this two months was on the opposite. 
+In March, 2010, the temperature increase to 1.873\oc, while -0.079\oc and -0.228 in 2009 and 2011 respectively.
+Moreover, in April, 2010, the temperature was still a abnormal value which was -0.208\oc.
+After that, there was a high avg temperature during May to October up to 1.577\oc.
+It is 0.677\oc greater than which in 2009, and 1.0985\oc greater than which in 2011.
+And the avg temperature 1.577\oc is almost 0.5\oc greater than the annual temperature of Iceland.
+It is a very abnormal value for Iceland.
+And we claim that there is a positive relationship between volcanic eruptions and global temperature. 
+
+Next, we analyze the relationship between forest and global temperature.
+We choose the 2019 Australian forest fires.
+The forest fires in 2019 is a major natural disaster. 
+And we plot the average temperature of Australia from January 2018 to December 2020.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.5]{Australia.png}
+  \caption{temperature of Australia}\label{fig14}
+\end{figure}
+
+The Australian forest fires was last for 1 year.
+So we focus on July, 2019 to July, 2020.
+
+The avg temperature during the forest fire is 1.268\oc.
+And there is 1.093\oc during July, 2018 to July, 2019.
+It is 0.175\oc greater.
+We claim that there still a positive relationship between forest fires and global temperature.
+
+Last but not least, we consider the relationship between COVID-19 to global temperature.
+
+We can draw the picture about injected number and temperature from 2020 Jan. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.2]{COVID-19.png}
+  \caption{COVID-19 and temperature}\label{fig15}
+\end{figure}
+
+We calculate the average temperature of first 15 months is $avg1=9.0693$,
+and $avg2=10.5949$ represents last 31 months when COVID-19 burst. 
+We can see that after COVID-19 burst in 2020 Jan, the global average temperature arised about 1.5256\oc.
+And this rise is reasonable because people need more activities to fight against COVID-19.
+So people around the world will take action such as large transport, factory produce etc. 
+In other words, this will lead to entropy increase and be characterized by global average temperature rise.
+So we still claim that there is a positive relationship between global temperature and COVID-19.
+
+\subsubsection{Summary}
 
 \subsection{(c)}
 \subsubsection{Data of more factor}
@@ -343,8 +507,12 @@ We find datasets of world energy, world population and Global forest resource.
 \url{https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy/downloads.html}
 \url{https://population.un.org/wpp/Download/Standard/MostUsed/}
 \url{https://fra-data.fao.org/WO/fra2020/dataDownload/} 
+\url{https://www.gddat.cn/newGlobalWeb/#/FeatureAnalysis}
+\url{https://www.fao.org/faostat/en/#data}
 
-\subsubsection{}
+\subsubsection{Analysis of relationship}
+Then we can use Grey Relation Analysis (GRA) to estimate the relationship between other factors
+
 
 
 \subsection{(d)}
