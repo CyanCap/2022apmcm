@@ -40,7 +40,7 @@
 \baominghao{2212335}                 %参赛编号
 \begin{document}
 
-\renewcommand{\abstractname}{abstract}
+\renewcommand{\abstractname}{Abstract}
 \pagestyle{frontmatterstyle}
 
 \begin{abstract}
@@ -132,7 +132,7 @@ The picture about annual average temperature between 1760 to 2022 is the followi
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{annual avg tem.jpg}
-  \caption{picture 1}\label{fig1}
+  \caption{picture 1}
 \end{figure}
 
 Then we get the average temperature in March between 2011 to 2021 is the following. 
@@ -144,7 +144,7 @@ Then we get the average temperature in March between 2011 to 2021 is the followi
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.2]{past 10 avg.jpg}
-  \caption{picture 2}\label{fig2}
+  \caption{picture 2}
 \end{figure}
 
 The total increasing rate is 1.100\%, and increase 0.606\oc in value.
@@ -161,7 +161,7 @@ And the monthly average temperature between January 2022 to October 2022 except 
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.35]{Average monthly temperature in 2022.jpg}
-  \caption{picture 3}\label{fig3}
+  \caption{picture 3}{fig3}
 \end{figure}
 
 Especially, the increasing rate between 2022 to 2021 is 0.0192.
@@ -235,7 +235,7 @@ After we get the annual average temperature, we first perform a stationarity che
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.35]{Smoothness Analysis.png}
-  \caption{picture 4}\label{fig5}
+  \caption{picture 4}
 \end{figure}
 
 It is not obvious from the image to confirm the stationary relationship of the data, so we use the mathematical test method——ADF test and KPSS test.
@@ -261,7 +261,7 @@ Therefore, the data after the first order difference can be used for time series
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{ACF.png}
-  \caption{picture 7}\label{fig7}
+  \caption{picture 7}
 \end{figure}
 
 We can't get the values of p and q from the figure, so we adopt the AIC and BIC criteria to find the most suitable p and q values within a certain range. When we have confirmed the appropriate (p, q, d) value, we can build a model to predict the subsequent data. In the process of forecasting, we also set the upper and lower forecast limits under the 95\% confidence interval.
@@ -317,6 +317,10 @@ So far, the data of the output part has been determined.
 Through the module chain network composed of LSTM cell units,
 Be able to predict the future through continuous learning of input data.
 
+We set the train set, test set as 2:8.
+And predict future 2000 years global temperature.
+
+
 \subsection{(c)}
 
 According to the model in question 1(b), we can easily predict global temperatures in 2050 and 2100 respectively using different models. 
@@ -329,13 +333,13 @@ First, let's predict the annual average temperature for the next 100 years.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.45]{ARIMA prediction 100.png}
-  \caption{picture 8}\label{fig8}
+  \caption{picture 8}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{ARIMA prediction 1400.png}
-  \caption{picture 9}\label{fig9}
+  \caption{picture 9}
 \end{figure}
 
 From the predicted results, when it comes to 2050, the annual average temperature will reach 9.6147 \oc. when it comes to 2100, the annual average temperature will reach 9.9985 \oc.
@@ -343,6 +347,20 @@ From the predicted results, when it comes to 2050, the annual average temperatur
 Since 20 \oc has not been reached, we continue to extend the forecast range. We will predict until 1400 years later. We found that when the time comes to 3404 years , the annual average temperature in the world will reach 20.0075 \oc and exceed 20 \oc for the first time.
 
 \subsubsection{Result from model LSTM}
+
+We enter annual standard data into the model, then we predict future 2000 years global temperature.
+We draw a picture about the prediction.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.15]{LSTM prediction.jpg}
+  \caption{LSTM prediction}
+\end{figure}
+
+We can see that, annual global temperature will increase as a line in the future.
+We further calculate that in 2050, global temperature will be .
+In 2100, global temperature will be .
+And finally arrive to 20\oc in 3633.
 
 
 \subsection{(d)}
@@ -373,7 +391,17 @@ We can find that, most of the p-values are very small.
 So we can conclude that most of the coefficients are reliable except MA{1}.
 
 \subsubsection{Analysis of model LSTM}
+In this model LSTM, we calculate the model statistic RMSE.
+That is we calculate RMSE as 
+\begin{align*}
+  RMSE=\sqrt{\frac{1}{N} \sum_{i=1}^n (y_i - f(x_i))^2} 
+\end{align*}
+where $N=272$, $y_i$ is the real global temperature from 1750 to 2022, and $f(x_i)$ is the prediction of it.
+We get $RMSE = 1.792$. 
+So we claim that the prediction using LSTM has less reliability than model ARIMA.
 
+In conclusion, we finally choose ARIMA to modify the description of past and future global temperature level.
+Because we find that ARIMA statistic is more reliable than LSTM statistic.
 
 \section{Solution for question 2}
 In question 2, we are required to build a global temperature model not only including the value of temperature 
@@ -395,7 +423,7 @@ And we draw a heat picture to describe the relationship.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.4]{position correlation.png}
-  \caption{position correlation}\label{fig10}
+  \caption{position correlation}
 \end{figure}
 
 Moreover, we make a statistic table for regression model.
@@ -403,7 +431,7 @@ Moreover, we make a statistic table for regression model.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.52]{2a table.png}
-  \caption{regression table}\label{fig11}
+  \caption{regression table}
 \end{figure}
 
 We can see that p-value is small enough, so we can conclude that this model is good.
@@ -423,7 +451,7 @@ We can get the time series decomposition.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.5]{seasonal.png}
-  \caption{time series decomposition}\label{fig12}
+  \caption{time series decomposition}
 \end{figure}
 
 We find that the estimation and resident are almost stable, and the observed temperature data has very small increasing trend. 
@@ -444,7 +472,7 @@ We plot the average temperature of Iceland from January 2009 to December 2011.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.45]{Iceland.png}
-  \caption{temperature of Iceland}\label{fig13}
+  \caption{temperature of Iceland}
 \end{figure}
 
 Eyjafjallajokull erupted on 20th March, 2010 first.
@@ -470,7 +498,7 @@ And we plot the average temperature of Australia from January 2018 to December 2
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.5]{Australia.png}
-  \caption{temperature of Australia}\label{fig14}
+  \caption{temperature of Australia}
 \end{figure}
 
 The Australian forest fires was last for 1 year.
@@ -488,7 +516,7 @@ We can draw the picture about injected number and temperature from 2020 Jan.
 \begin{figure}[htbp]
   \centering
   \includegraphics[scale=0.2]{COVID-19.png}
-  \caption{COVID-19 and temperature}\label{fig15}
+  \caption{COVID-19 and temperature}
 \end{figure}
 
 We calculate the average temperature of first 15 months is $avg1=9.0693$,
@@ -500,49 +528,90 @@ In other words, this will lead to entropy increase and be characterized by globa
 So we still claim that there is a positive relationship between global temperature and COVID-19.
 
 \subsubsection{Summary}
+In question 2(a), we search the relationship betweennatural disasters (such as volcanic eruptions, forest fires and the COVID-19) and global temperature.
+And take the example of 2010 Eyjafjallajokull eruption, 2019 Australian forest fires to consider the relationship about local temperature.
+Then expand the local conclusion to global conclusion that there is a positive relationship between volcanic eruptions, forest fires and global temperature. 
+Moreover, we find that COVID-19 also has a positive relationship to global temperature.
+
+Human activities fighting against this kind of disasters is a vital reason for global warming.
+And disasters can also be considered as a entropy increase of the Earth.
+They are the global activities that affecting human being.
+So people must produce more heat during disasters than other time.
+We conclude that disasters make global temperature increase.
 
 \subsection{(c)}
-\subsubsection{Data of more factor}
-We find datasets of world energy, world population and Global forest resource. 
-\url{https://www.bp.com/en/global/corporate/energy-economics/statistical-review-of-world-energy/downloads.html}
-\url{https://population.un.org/wpp/Download/Standard/MostUsed/}
-\url{https://fra-data.fao.org/WO/fra2020/dataDownload/} 
-\url{https://www.gddat.cn/newGlobalWeb/#/FeatureAnalysis}
-\url{https://www.fao.org/faostat/en/#data}
+\subsubsection{Data of more factors}
+We find datasets of world energy, world population and Global forest resource. \\
+\url{https://population.un.org/wpp/Download/Standard/MostUsed/}\\
+\url{https://fra-data.fao.org/WO/fra2020/dataDownload/}\\
+\url{https://www.gddat.cn/newGlobalWeb/#/FeatureAnalysis}\\
+\url{https://www.fao.org/faostat/en/#data}.
 
 \subsubsection{Analysis of relationship}
 Then we can use Grey Relation Analysis (GRA) to estimate the relationship between other factors
 
+\subsubsection{Build GRA}
 
+In fact, the GRA algorithm provides a way to measure the distance between two vectors. 
+For a time factor, a vector can be considered a time curve, while the GRA algorithm is measured if the shape and trend of the two curves are the same. 
+In order to avoid other interference and the effect of protruding morphological features, the GRA first makes normalization, 
+fix all vectors in the same size and position, and then calculates the distance of each point. 
+Finally, by adjusting min function and max function the last output result falls between 0 and 1, corresponding to the general definition of * * coefficient **. 
+Rho fixes the difference between different coefficients of correlation, in other words, the difference in output, t o be harder or more compact. 
+From the mathematical point of view, the algorithm measures the sum of the reciprocal $l_1$ norm distance of each dimension of the normalized sub vector and the parent vector, 
+and maps it to the 0~1 interval as a strategy to measure the correlation between the sub vector and the parent vector.
+
+\subsubsection{Result from GRA}
+Using GRA method, we can get the result is:
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.25]{2c1.jpg}
+  \caption{Normal data of factors}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.25]{2c2.jpg}
+  \caption{Normal data of factors}
+\end{figure}
+
+By using the additional 7 types of data collected, we use GRA(Grey Relation Analysis) to establish an evaluation system to determine which indicators have the greatest impact on temperature.
+Serialize and normalize the 7 types of data, and then use the established formula to calculate the corresponding gray correlation coefficient and the average value of the correlation coefficient to obtain the degree of influence of different indicators on temperature. This method reflects the association degree between two sequences by measuring the distance between two normalized vector sequences and constraining it between 0 and 1.
+We can get the result below
+\begin{center}
+  \begin{tabular}{c|ccccccc}
+    \hline
+    Index &forest& CO2 & macro ind & population & products & trade & agricultural\\
+    \hline
+    Correlation & 0.9437&	0.8653&	0.6097&	0.8871&	0.8177&	0.8538&	0.9602\\
+    \hline
+    \end{tabular}
+\end{center}
+
+From the values in the table, it can be seen that agricultural area, forest area and population factors have a greater impact on temperature. 
+
+This is obvious. 
+Population growth is one of the main factors contributing to global warming. 
+At the same time, it seriously threatens the balance between the natural ecological environment. 
+Excessive population leads to the continuous increase of CO2 content in the atmosphere, and the resulting greenhouse effect will directly affect the climate change on the earth's surface. 
+Along with the increase in CO2 in the air, forests play an important role in converting CO2. 
+But forests are gradually shrinking and the amount of CO2 converted is also decreasing. 
+Changes in agricultural area will cause changes in the absorption of greenhouse gas emissions, ground reflectivity, and evaporation, 
+thereby causing changes in the carbon storage capacity, energy balance, and water transport of the entire ecosystem. 
+The urban heat island effect is the best example of the impact of residential expansion on the local climate, and microclimate changes caused by land cover changes also occur in life. 
+Through the interaction between various scales and various spheres on the earth's surface, the impact of land use on the climate on a small local scale can be transferred to a larger scale or even a global scale, 
+and the urban heat island effect will have great influence on the increase of global temperature.
 
 \subsection{(d)}
+In question 2(d), we need to find some measures to curb or slow down global wariming.
+We think there are 3 measures to curb global warming. The first is to control population growth. 
+Effective control of population growth reduces CO2 emissions. The second is to plant trees, so that forests can play a greater role in absorbing and transforming CO2. 
+The third is to improve the utilization technology and utilization rate of various energy sources, make more efficient use, and reduce CO2 emissions.
 
 
 
 \newpage
-\section{Solution for question 3}
-
-
-
-\section{Future Work}
-\subsection{Another model}
-\subsubsection{The limitations of queuing theory}
-
-
-
-
-\subsubsection{}
-
-
-\subsubsection{}
-
-
-
-\subsubsection{}
-
-
-
-
+\section{A non-technical article}
 
 %参考文献
 \begin{thebibliography}{9}%宽度9

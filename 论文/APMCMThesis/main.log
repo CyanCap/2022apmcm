@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.2)  26 NOV 2022 23:51
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.2)  27 NOV 2022 11:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1118,43 +1118,33 @@ File: ARIMA prediction 100.png Graphic file (type bmp)
 <ARIMA prediction 100.png>
 File: ARIMA prediction 1400.png Graphic file (type bmp)
 <ARIMA prediction 1400.png>
- [7] [8]
+File: LSTM prediction.jpg Graphic file (type bmp)
+<LSTM prediction.jpg>
+ [7] [8] [9]
 File: position correlation.png Graphic file (type bmp)
 <position correlation.png>
 File: 2a table.png Graphic file (type bmp)
 <2a table.png>
- [9]
 File: seasonal.png Graphic file (type bmp)
 <seasonal.png>
- [10]
+ [10] [11]
 File: Iceland.png Graphic file (type bmp)
 <Iceland.png>
 
-Overfull \hbox (9.2864pt too wide) in paragraph at lines 446--447
+Overfull \hbox (9.2864pt too wide) in paragraph at lines 474--475
  [][] 
  []
 
 File: Australia.png Graphic file (type bmp)
 <Australia.png>
-[11]
 File: COVID-19.png Graphic file (type bmp)
 <COVID-19.png>
-
-Overfull \hbox (21.96567pt too wide) in paragraph at lines 506--512
-[][] [] [][][] [] [][] [] [][][][][][] [] [][][][][][][][][] [] [][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
- []
-
-
-Overfull \hbox (10.24722pt too wide) in paragraph at lines 506--512
-[][][][][][][][][] [] [][][][]$ $[][][][][] [] [] [] [][][][][][][][][][] [] [][] [] [][][] [] [][][] [] [][][][][][][][] [] [][][][][][][][] [] [][][][][][][][][]$ $[][][][][] []
- []
-
-
-Overfull \hbox (10.09729pt too wide) in paragraph at lines 506--512
-[] [] [][][][][][][][][] [] [][][] [] [][][] [] [][] [] [][][][][][][] [] [][][][][][][][][][][][][]$ $[][][][][] [] [] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][][][] []
- []
-
-[12] [13] [14] (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+[12] [13]
+File: 2c1.jpg Graphic file (type bmp)
+<2c1.jpg>
+File: 2c2.jpg Graphic file (type bmp)
+<2c2.jpg>
+ [14] [15] [16] [17] (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
@@ -1162,18 +1152,18 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 ) 
 AED: lastpage setting LastPage
-[15] (./main.aux)
+[18] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17543 strings out of 476179
- 370382 string characters out of 5804253
- 971781 words of memory out of 5000000
- 37925 multiletter control sequences out of 15000+600000
+ 17554 strings out of 476179
+ 370667 string characters out of 5804253
+ 971857 words of memory out of 5000000
+ 37933 multiletter control sequences out of 15000+600000
  481892 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  104i,13n,111p,1029b,1599s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (17 pages).
+Output written on main.pdf (20 pages).
