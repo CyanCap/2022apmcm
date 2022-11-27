@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.2)  27 NOV 2022 17:17
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.2)  27 NOV 2022 18:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,123 +561,25 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 ) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-
-Package ctex Warning: Package `CJK' can not be loaded with `xeCJK'.
-
-(d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.sty
-Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip84
-\subfigcapskip=\skip85
-\subfigcaptopadj=\dimen295
-\subfigbottomskip=\skip86
-\subfigcapmargin=\dimen296
-\subfiglabelskip=\skip87
-\c@subfigure=\count349
-\c@lofdepth=\count350
-\c@subtable=\count351
-\c@lotdepth=\count352
-
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-(d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip88
-\subfig@bottom=\skip89
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/abstract/abstract.sty
-Package: abstract 2009/06/08 v1.2a configurable abstracts
-\abstitleskip=\skip90
-\absleftindent=\skip91
-\absrightindent=\skip92
-\absparindent=\skip93
-\absparsep=\skip94
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/diagbox/diagbox.sty
-Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.sty
-Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/pict2e/pict2e.cfg
-File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
-)
-Package pict2e Info: Driver file: xetex.def on input line 112.
-Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/pict2e/p2e-xetex.def
-File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
-)
-\pIIe@GRAPH=\toks31
-\@arclen=\dimen297
-\@arcrad=\dimen298
-\pIIe@tempdima=\dimen299
-\pIIe@tempdimb=\dimen300
-\pIIe@tempdimc=\dimen301
-\pIIe@tempdimd=\dimen302
-\pIIe@tempdime=\dimen303
-\pIIe@tempdimf=\dimen304
-)
-\diagbox@boxa=\box69
-\diagbox@boxb=\box70
-\diagbox@boxm=\box71
-\diagbox@wd=\dimen305
-\diagbox@ht=\dimen306
-\diagbox@insepl=\dimen307
-\diagbox@insepr=\dimen308
-\diagbox@outsepl=\dimen309
-\diagbox@outsepr=\dimen310
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks32
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count353
-\float@exts=\toks33
-\float@box=\box72
-\@float@everytoks=\toks34
-\@floatcapt=\box73
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/was/gensymb.sty
-Package: gensymb 2003/07/02 v1.0 (WaS)
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count354
-)
-\MT@toks=\toks35
-\MT@tempbox=\box74
-\MT@count=\count355
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
-LaTeX Info: Redefining \leftprotrusion on input line 1028.
-LaTeX Info: Redefining \rightprotrusion on input line 1036.
-LaTeX Info: Redefining \textls on input line 1195.
-\MT@outer@kern=\dimen311
-LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
-\MT@listname@count=\count356
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/microtype/microtype-xetex.def
-File: microtype-xetex.def 2022/03/14 v3.0d Definitions specific to xetex (RS)
-LaTeX Info: Redefining \lsstyle on input line 236.
-)
-Package microtype Info: Loading configuration file microtype.cfg.
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
-)) (./main.aux)
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -715,359 +617,75 @@ LaTeX Font Info:    ... okay on input line 30.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 30.
-\c@lstlisting=\count357
+(lastpage)             ! on input line 20.
+\c@lstlisting=\count349
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
-LaTeX Font Info:    Redeclaring math accent \check on input line 30.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 20.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 20.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 20.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 20.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 20.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 20.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 20.
+LaTeX Font Info:    Redeclaring math accent \check on input line 20.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 20.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 20.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 20.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 20.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 30.
+(Font)              `operators' in the math version `normal' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 30.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 20.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 30.
+(Font)              `operators' in the math version `bold' on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 30.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 30.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 30.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 30.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 30.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 20.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 30.
+(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 30.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/b/it on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 30.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 20.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 30.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 20.
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
-Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
 (./apmcmthesis.cfg
 File: apmcmthesis.cfg 2019/11/05 v1.0 apmcmthesis configuration file
-)
-LaTeX Info: Redefining \celsius on input line 30.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 30.
+) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd) [1
 
-
-Package gensymb Warning: Not defining \perthousand.
-
-LaTeX Info: Redefining \ohm on input line 30.
-Package gensymb Info: Using \Omega for \ohm on input line 30.
-
-Package gensymb Warning: Not defining \micro.
-
-LaTeX Info: Redefining \microtypecontext on input line 30.
-Package microtype Info: Applying patch `item' on input line 30.
-Package microtype Info: Applying patch `toc' on input line 30.
-Package microtype Info: Applying patch `eqnum' on input line 30.
-Package microtype Info: Applying patch `footnote' on input line 30.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of spacing.
-Package microtype Info: No adjustment of kerning.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `TimesNewRoman' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/9.03374'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/5'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/5'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/5'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/5'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/5'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/5'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
-(d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
- (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)
-Overfull \hbox (8.21808pt too wide) in paragraph at lines 78--79
-\TU/TimesNewRoman(0)/b/n/9.03374 Keywords: \TU/TimesNewRoman(0)/m/n/9.03374 Autoregressive integrated moving average Long short term memory algorithm  Grey
- []
-
-[1
-
-]
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/15.05624'.
-(microtype)             Ignoring protrusion settings for this character.
- (./main.toc
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-)
+] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2]
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/n/12.045'.
-(microtype)             Ignoring protrusion settings for this character.
- [1]
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/m/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
- [2]
-Package microtype Info: Character `textendash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textemdash ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquoteright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblleft ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textquotedblright ' is missing
-(microtype)             in font `TU/TimesNewRoman(0)/b/it/10.53937'.
-(microtype)             Ignoring protrusion settings for this character.
+ [2] [1] [2]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -1080,10 +698,6 @@ Package fontspec Info: Could not resolve font "FangSong/B" (it probably
 Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
 Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             with options [Script={CJK}].
@@ -1100,7 +714,7 @@ File: annual avg tem.jpg Graphic file (type bmp)
 File: past 10 avg.jpg Graphic file (type bmp)
 <past 10 avg.jpg>
 
-Overfull \hbox (10.29662pt too wide) detected at line 216
+Overfull \hbox (10.29662pt too wide) detected at line 201
 []
  []
 
@@ -1114,60 +728,61 @@ File: order 1.png Graphic file (type bmp)
 <order 1.png>
 File: order 2.png Graphic file (type bmp)
 <order 2.png>
+ [6]
 File: ACF.png Graphic file (type bmp)
 <ACF.png>
- [6] [7]
+ [7]
 File: ARIMA prediction 100.png Graphic file (type bmp)
 <ARIMA prediction 100.png>
 File: ARIMA prediction 1400.png Graphic file (type bmp)
 <ARIMA prediction 1400.png>
 File: LSTM prediction.jpg Graphic file (type bmp)
 <LSTM prediction.jpg>
- [8] [9] [10]
+ [8] [9]
 File: position correlation.png Graphic file (type bmp)
 <position correlation.png>
+ [10]
 File: 2a table.png Graphic file (type bmp)
 <2a table.png>
+ [11]
 File: seasonal.png Graphic file (type bmp)
 <seasonal.png>
- [11]
 File: Iceland.png Graphic file (type bmp)
 <Iceland.png>
 
-Overfull \hbox (9.2864pt too wide) in paragraph at lines 536--537
+Overfull \hbox (9.2864pt too wide) in paragraph at lines 521--522
  [][] 
  []
 
 [12]
 File: Australia.png Graphic file (type bmp)
 <Australia.png>
- [13]
 File: COVID-19.png Graphic file (type bmp)
 <COVID-19.png>
- [14]
+ [13] [14]
 File: 2c1.jpg Graphic file (type bmp)
 <2c1.jpg>
 File: 2c2.jpg Graphic file (type bmp)
 <2c2.jpg>
- [15] [16] [17] [18]
-Overfull \hbox (17.99257pt too wide) in paragraph at lines 697--698
+ [15] [16] [17]
+Overfull \hbox (17.99257pt too wide) in paragraph at lines 682--683
 []\TU/TimesNewRoman(0)/m/n/10.53937 Global Disaster Data Platform: $[][][][][] [] [] [] [][][] [] [][][][][] [] [][] [] [][][][][][][][][][][][] [] [] [] [][][][][][][][][][][][][][][]$ 
  []
 
-[19] (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+[18] (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [20] [21] (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+) [19] [20] (d:/Program Files (x86)/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [22] [23] [24] [25] [26] [27] 
+) [21] [22] [23] [24] [25] [26] 
 AED: lastpage setting LastPage
-[28] (./main.aux) ) 
+[27] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 17808 strings out of 476179
- 375381 string characters out of 5804253
- 1029302 words of memory out of 5000000
- 38187 multiletter control sequences out of 15000+600000
- 481908 words of font info for 115 fonts, out of 8000000 for 9000
+ 15226 strings out of 476179
+ 328369 string characters out of 5804253
+ 953033 words of memory out of 5000000
+ 35682 multiletter control sequences out of 15000+600000
+ 476947 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,13n,111p,1632b,2316s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,13n,111p,1634b,2316s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (30 pages).
+Output written on main.pdf (29 pages).
