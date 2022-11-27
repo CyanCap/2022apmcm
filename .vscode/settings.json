@@ -363,5 +363,6 @@
         "editor.suggestSelection": "recentlyUsedByPrefix" //控制在建议列表中如何预先选择建议。recentlyUsedByPrefix: 根据之前补全过的建议的前缀来进行选择。例如，co -> console、con -> const。
     },
     "audioCues.lineHasError": "off",
+    "latex.linter.enabled": false,
     
 }

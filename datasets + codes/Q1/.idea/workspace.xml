@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4e9260-4bdd-4bba-8954-16c2b61fe078" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Q1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Q2 time.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Q2/disasters.xlsx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Q1.b lstm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../论文/APMCMThesis/main.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../论文/APMCMThesis/main.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../论文/APMCMThesis/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../论文/APMCMThesis/main.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../论文/APMCMThesis/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../论文/APMCMThesis/main.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../论文/APMCMThesis/main.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../论文/APMCMThesis/main.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../论文/APMCMThesis/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../论文/APMCMThesis/main.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../论文/APMCMThesis/main.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../论文/APMCMThesis/main.toc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "restructured.text.topic"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;restructured.text.topic&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

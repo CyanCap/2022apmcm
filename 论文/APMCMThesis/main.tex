@@ -1,16 +1,5 @@
-% !Mode:: "TeX:UTF-8"
-%%  本模板推荐以下方式编译:
-%%     1. PDFLaTeX[推荐]
-%%     2. xelatex [含中文推荐]
-%%  注意：
-%%　 1. 文件默认的编码为 UTF-8 对于windows，请选用支持UTF-8编码的编辑器。
-%%   2. 若是模板有什么问题，请及时与我们取得联系，Email：latexstudio@qq.com。
-%%   3. 可以到  https://ask.latexstudio.net 提问
-%%   4. 请安装 最新版本的 TeXLive 地址：
-%%   http://mirrors.ctan.org/systems/texlive/Images/texlive.iso
-
+%123
 \documentclass{apmcmthesis}
-
 \usepackage{url}
 \usepackage{CJK}
 \usepackage{appendix}
@@ -45,14 +34,48 @@
 
 \begin{abstract}
 
-\verb|apmcmthesis| \LaTeX{} template is designed by \url{https://www.latexstudio.net} for \url{http://www.apmcm.org}. The template is designed to let everyone focus on the content writing of the paper, without spending too much effort on the customization and adjustment of the format.
+Global climate warming is a phenomenon related to nature. It is due to the continuous 
+accumulation of greenhouse effect, which leads to the imbalance of energy absorbed and 
+emitted by the earth atmosphere system, and the continuous accumulation of energy in the earth 
+atmosphere system, leading to temperature rise and global climate warming. In this paper, the ARIMA model and LSTM model are used to predict the future global average temperature change. The prediction results show that the future global temperature will show a slow rising trend. Further, various factors that may affect the rise in temperature are analyzed by using the Grey Relation Analysis（GRA）, and it is determined that the area of agricultural land has the greatest impact on the rise in temperature.
+  
+For question 1, use the data provided by the question to restore the original standard temperature data. 
+In the discussion of (a), it is believed that the increase in temperature in March 2022 is significantly greater than that in the past ten years, 
+because the temperature increase in the previous ten years was 1.1\%, and the increase from March 2021 to March 2022 is 1.92\%. 
 
-Note that users need to have some experience with \LaTeX{}, at least some of the features of common macro packages, such as references, math formulas, image usage, list environment, etc. Templates have added commonly used macros. Package, no additional user added.
+In (b), ARIMA model and LSTM model are established to predict the future air temperature respectively. 
+Both models predict a slow rise in temperature.
 
-This template is located on   \url{https://github.com/latexstudio/APMCMThesis}. You can update files from the repository.
+In the discussion of (c), it is calculated that the ARIMA prediction result is 9.6147 degrees in 2050 and 9.9985 degrees in 2100; 
+the LSTM prediction result is 8.9581 degrees in 2050 and 9.2975 degrees in 2100. 
 
+In (d), it is considered that the ARIMA model is better than LSTM, because the p-value of ARIMA is lower, and the RMSE value of LSTM is higher than ARIMA, 
+indicating that the goodness of fit of ARIMA is higher, so we choose the ARIMA model.
+  
+For question 2, in (a), using the data set provided by the title and other data sets, 
+it is found that the global average temperature has a significant correlation with the location, 
+and the global land average temperature is higher than the global (land + ocean) average temperature, 
+the global land average temperature is 0.6 degrees higher than the global (land + ocean) average temperature; 
+the global average is less relevant to location. 
 
-\keywords{Keywords1\quad  Keywords2\quad   Keywords3}
+In (b), analyze the factors of volcanic eruptions, forest fires and the COVID-19. 
+We find that there is a positive relationship between global temperature and some disasters.
+This can be explained as the entropy increasing lead to global temperature increasing.
+
+In (c), relevant factors are collected including: forest area, CO2 emissions, macroeconomic indicators, population, total production, total trade, agricultural land area.
+
+In (d), we need to find some measures to curb or slow down global wariming.
+We think there are 3 measures to curb global warming. The first is to control population growth. 
+Effective control of population growth reduces CO2 emissions. The second is to plant trees, so that forests can play a greater role in absorbing and transforming CO2. 
+The third is to improve the utilization technology and utilization rate of various energy sources, make more efficient use, and reduce CO2 emissions.
+
+For question 3, we write a non-technical article to explain that global warming is getting worse since 2020.
+With the increasing of activities of human being, global temperature turns into a new high level.
+Although being 20\oc in average is far away from now, if we do nothing, it will arrive earlier.
+Moreover, local disaster will arise global temperature, this is unavoidable.
+But we need to slow down activities and lessen the release level of CO2.
+Improve utilization technology is a very good way to relieve global warming.
+\keywords{Autoregressive integrated moving average\quad  Long short term memory algorithm\quad  \quad Grey relative analysis}
 
 \end{abstract}
 
@@ -108,14 +131,53 @@ to the APMCM Organization Committee to explain your team's findings and suggesti
 The PDF solution with a total number of not more than 25 pages contains: 
 a full table of one page; and complete solution catalogue; A non-technical article page.
 
-\section{Terms, definitions and symbols}
+\section{Terms and symbols}
+\subsection{Terms}
+\begin{itemize}
+  \item ARIMA: autoregressive integrated moving average.
+  \item LSTM: long and short term memory network.
+  \item AIC: Akaike information criterion.
+  \item SC: Schwarz criterion.
+  \item ACF: autocorrelation function.
+  \item cell: chain of repeated modules.
+\end{itemize}
+
+\subsection{Symbols}
+\begin{center}
+  \setlength{\tabcolsep}{9mm}{
+    \begin{tabular}{ccc}
+      \toprule
+      \textbf{Symbols} & \textbf{Meaning} & \textbf{Unit}\\
+      $y_i$ & real value & \oc\\
+      $x_i$ & average temperature (local or global) & \oc\\
+      $\mu$ & constant & -\\
+      $\gamma_i$ & coefficeint of $x_i$ & -\\
+      $\theta_i$ & coefficeint of $\epsilon_i$ & -\\
+      $p,\;\; q$ & lagged times & -\\
+      $d$ & differential order & -\\
+      $h_{t-1}$ & input before cell t-1 & -\\
+      $x_t$	&input of current cell&-\\
+			$b_f$    &bias term &-\\
+			$\tilde{C_t}$	&candidate vector&-\\
+			$C_t$	 &new position of cell t&-\\
+			$C_t-1$		&previou position of cell t&-\\
+      \midrule  
+      \bottomrule
+  \end{tabular}}
+\end{center}
 
 \section{Models assumptions}
+\begin{itemize}
+  \item 1. Global temperature is not affected by the outside universe (such as the sun). Only affected by the Earth itself.
+  \item 2. Global temperature data is accurate. They can describe an aspect of global temperature.
+  \item 3. Nature of the Earth is stable, global temperature is stable if there is no factor on the Earth.
+  \item 4. Global temperature is affected by the factors we pick only.
+\end{itemize}
 
 \section{Solution for question 1}
 In whole question 1, we need to analyze global temperature changes using dataset in the attachment and other datasets we collect.
 
-\subsection{(a)}
+\subsection{Global temperature increase faster}
 \subsubsection{Analysis of problem 1(a)}
 In this question, we need to judge if the increase of global temperature in March 2022 resulted in a larger increase thean observed over any previous 10-year period. 
 So we can plot the global temperature in 2022.
@@ -165,10 +227,11 @@ And the monthly average temperature between January 2022 to October 2022 except 
 \end{figure}
 
 Especially, the increasing rate between 2022 to 2021 is 0.0192.
-This is much smaller than previous 10 years.
+This is greater than previous 10 years.
+So we think that the increase of global temperature in March 2022 resulted in a larger increase than observed over any previous 10-year 
 
 
-\subsection{(b)}
+\subsection{Build model description}
 \subsubsection{Analysis of problem 1(b)}
 Question (b) require us to build 2 or more mathematical models to describe the past and predict the future global temperature level.
 We can pick a observation as example to analyze the data annually. 
@@ -321,12 +384,12 @@ We set the train set, test set as 2:8.
 And predict future 2000 years global temperature.
 
 
-\subsection{(c)}
+\subsection{Prediction of global temperature}
 
 According to the model in question 1(b), we can easily predict global temperatures in 2050 and 2100 respectively using different models. 
 Moreover we need to find when the average temperature of observation points in ous prediction models will reach 20.00\oc.
 
-\subsubsection{Result from model ARIMA}
+\subsubsection{Prediction from model ARIMA}
 
 First, let's predict the annual average temperature for the next 100 years.
 
@@ -346,7 +409,7 @@ From the predicted results, when it comes to 2050, the annual average temperatur
 
 Since 20 \oc has not been reached, we continue to extend the forecast range. We will predict until 1400 years later. We found that when the time comes to 3404 years , the annual average temperature in the world will reach 20.0075 \oc and exceed 20 \oc for the first time.
 
-\subsubsection{Result from model LSTM}
+\subsubsection{Prediciton from model LSTM}
 
 We enter annual standard data into the model, then we predict future 2000 years global temperature.
 We draw a picture about the prediction.
@@ -363,7 +426,7 @@ In 2100, global temperature will be .
 And finally arrive to 20\oc in 3633.
 
 
-\subsection{(d)}
+\subsection{ARIMA is more accurate}
 We need to calculate important statistics to determine which model is better. 
 We compare SE, MSE and RMSE and draw a figure as the following.
 
@@ -407,7 +470,7 @@ Because we find that ARIMA statistic is more reliable than LSTM statistic.
 In question 2, we are required to build a global temperature model not only including the value of temperature 
 but also more other reasons such as position, time, volcanic eruptions, forest fires and the COVID-19 etc.
 
-\subsection{(a)}
+\subsection{Relation about time and location}
 \subsubsection{Analysis of problem 2(a)}
 According to the data given in attachment 1, we analyze the correlation between global temperature, time and location.
 We can use multiple regression to describe the relationship between global temperature, time and location. 
@@ -462,8 +525,7 @@ We get that the p-value is 3.421929753273345e-10.
 So we claim that time has no relationship to global temperature.
 
 
-\subsection{(b)}
-In this section, we should get data of the natural disasters, we find part of data(such as volcanic eruptions, forest fires) in \url{https://www.emdat.be/} and part of data(COVID-19) in \url{https://covid19.who.int/data}.
+\subsection{Disasters factors}
 
 \subsubsection{Relationship analysis}
 In this section, we choose 2010 volcanic eruptions in Ayafara, Iceland to analyze the average temperature change of Iceland in 2010.
@@ -539,7 +601,7 @@ They are the global activities that affecting human being.
 So people must produce more heat during disasters than other time.
 We conclude that disasters make global temperature increase.
 
-\subsection{(c)}
+\subsection{More reason analysis based on GRA }
 \subsubsection{Data of more factors}
 We find datasets of world energy, world population and Global forest resource. \\
 \url{https://population.un.org/wpp/Download/Standard/MostUsed/}\\
@@ -561,7 +623,7 @@ Rho fixes the difference between different coefficients of correlation, in other
 From the mathematical point of view, the algorithm measures the sum of the reciprocal $l_1$ norm distance of each dimension of the normalized sub vector and the parent vector, 
 and maps it to the 0~1 interval as a strategy to measure the correlation between the sub vector and the parent vector.
 
-\subsubsection{Result from GRA}
+\subsubsection{Relationship based on GRA}
 Using GRA method, we can get the result is:
 \begin{figure}[htbp]
   \centering
@@ -602,75 +664,459 @@ The urban heat island effect is the best example of the impact of residential ex
 Through the interaction between various scales and various spheres on the earth's surface, the impact of land use on the climate on a small local scale can be transferred to a larger scale or even a global scale, 
 and the urban heat island effect will have great influence on the increase of global temperature.
 
-\subsection{(d)}
+\subsection{Measures to curb or slow down global warming}
 In question 2(d), we need to find some measures to curb or slow down global wariming.
 We think there are 3 measures to curb global warming. The first is to control population growth. 
-Effective control of population growth reduces CO2 emissions. The second is to plant trees, so that forests can play a greater role in absorbing and transforming CO2. 
+Effective control of population growth reduces CO2 emissions. 
+The second is to plant trees, so that forests can play a greater role in absorbing and transforming CO2. 
 The third is to improve the utilization technology and utilization rate of various energy sources, make more efficient use, and reduce CO2 emissions.
 
 
 
 \newpage
 \section{A non-technical article}
+Global warming is a phenomenon related to nature. Due to the continuous accumulation of the greenhouse effect, the energy absorbed and emitted by the earth-atmosphere system is unbalanced, and the energy is continuously accumulated in the earth-atmosphere system, which leads to an increase in temperature and global warming. When people burn fossil fuels, such as oil, coal, etc., or cut down forests and burn them, a large amount of carbon dioxide, or greenhouse gas, is produced. These greenhouse gases are highly transparent to visible light from solar radiation and emitted to the earth. The long-wave radiation is highly absorptive, which can strongly absorb the infrared rays in the ground radiation, leading to an increase in the temperature of the earth, that is, the greenhouse effect. Global warming will redistribute global precipitation, melt glaciers and permafrost, and rise sea levels, which will not only endanger the balance of natural ecosystems, but also affect human health and even threaten human survival. On the other hand, due to terrestrial greenhouse gas emissions, the temperature of the continent has risen, and the temperature difference between the ocean and the ocean has become smaller, which in turn has caused the air flow to slow down, and the smog cannot be blown away in a short time, resulting in more smog in many cities and affecting human health. Measures such as car restrictions and suspension of production have only short-term and partial effects, and cannot fundamentally change climate warming and smog pollution.
+
+The previous part of this article shows that the global average temperature is showing a rising trend year by year, especially since humans entered the industrialization period, the global average temperature has risen more significantly. After research and prediction, it is found that the global average temperature will approach 10 degrees Celsius in 2100, and in the next 1,500 years, the global average temperature may reach 20 degrees Celsius.
+
+Studies have shown that the global average temperature rise is affected by many aspects, including forest area, CO2 emissions, macroeconomic indicators, population, total production, total trade, agricultural land area, etc. Among these factors, the agricultural land area has a significant impact on the global average temperature rise Higher impacts are greatest, and macroeconomic indicators have the smallest impact on global average temperature rise.
+
+Knowing the conclusion above, we human being must take action to slow down the global temperature increasing.
+Firstly, we must control the population growth.
+Although we cannot force people not to give birth of children, we can show the awareness of Oligogenesis and superior breeding.
+Then the increase rate of population could be slowed down.
+Moreover, since the forest land and agricultral land own vital relationship to global temperature, we plant more tree and recover more green land are vital action.
+If we lessen the cut of the tree and develop utilization technology, human will release less CO2.
+Then the global temperature increasing will slow down.
+
+
+\newpage
+
+Data Source:
+\begin{itemize}
+  \item Global Disaster Data Platform: \url{https://www.gddat.cn/newGlobalWeb/#/FeatureAnalysis}
+  \item FAO data page: \url{https://www.fao.org/faostat/en/#data}
+  \item WHO Coronavirus data page: \url{https://covid19.who.int/data}
+\end{itemize}
 
 %参考文献
 \begin{thebibliography}{9}%宽度9
-\bibitem{1} Author, Title, Place of Publication: Press, Year of publication.
-\bibitem{2} author, paper name, magazine name, volume number: starting and ending
-page number, year of publication.
-\bibitem{3} author, resource title, web site, visit time (year, month, day).
-\bibitem{bib:one} \LaTeX{}{资源和技巧学习} \url{https://www.latexstudio.net}
-\bibitem{bib:two} \LaTeX{}{问题交流网站} \url{https://wenda.latexstudio.net}
-\bibitem{bib:two} {模板库维护} \url{https://github.com/latexstudio/APMCMThesis}
+\bibitem{1} FAN Bihang, Li Ning, GUO Li, Relationship between the Number of Natural Disasters and Climate Change from 1950 to 2010 in China, Academy of Disaster Reduction and Emergency Management,Ministry of Civil Affairs \& Ministry of Education, Beijing 100875.
+\bibitem{2} 石头, 时间序列(ARIMA)模型及其matlab实现, \url{https://zhuanlan.zhihu.com/p/495845415}, 2022, 11, 25.
+\bibitem{3} : FAO. 2020. Global Forest Resources Assessment 2020 – Key findings. Rome. \url{https://doi.org/10.4060/ca8753en}
 \end{thebibliography}
 
 \newpage
 %附录
-
 \section{Appendix}
-\begin{lstlisting}[language=matlab,caption={The matlab Source code of Algorithm}]
-kk=2;[mdd,ndd]=size(dd);
-while ~isempty(V)
-[tmpd,j]=min(W(i,V));tmpj=V(j);
-for k=2:ndd
-[tmp1,jj]=min(dd(1,k)+W(dd(2,k),V));
-tmp2=V(jj);tt(k-1,:)=[tmp1,tmp2,jj];
-end
-tmp=[tmpd,tmpj,j;tt];[tmp3,tmp4]=min(tmp(:,1));
-if tmp3==tmpd, ss(1:2,kk)=[i;tmp(tmp4,2)];
-else,tmp5=find(ss(:,tmp4)~=0);tmp6=length(tmp5);
-if dd(2,tmp4)==ss(tmp6,tmp4)
-ss(1:tmp6+1,kk)=[ss(tmp5,tmp4);tmp(tmp4,2)];
-else, ss(1:3,kk)=[i;dd(2,tmp4);tmp(tmp4,2)];
-end;end
-dd=[dd,[tmp3;tmp(tmp4,2)]];V(tmp(tmp4,3))=[];
-[mdd,ndd]=size(dd);kk=kk+1;
-end; S=ss; D=dd(1,:);
- \end{lstlisting}
-\begin{lstlisting}[language=c,caption={The lingo source code}]
-kk=2;
-[mdd,ndd]=size(dd);
-while ~isempty(V)
-    [tmpd,j]=min(W(i,V));tmpj=V(j);
-for k=2:ndd
-    [tmp1,jj]=min(dd(1,k)+W(dd(2,k),V));
-    tmp2=V(jj);tt(k-1,:)=[tmp1,tmp2,jj];
-end
-    tmp=[tmpd,tmpj,j;tt];[tmp3,tmp4]=min(tmp(:,1));
-if tmp3==tmpd, ss(1:2,kk)=[i;tmp(tmp4,2)];
-else,tmp5=find(ss(:,tmp4)~=0);tmp6=length(tmp5);
-if dd(2,tmp4)==ss(tmp6,tmp4)
-    ss(1:tmp6+1,kk)=[ss(tmp5,tmp4);tmp(tmp4,2)];
-else, ss(1:3,kk)=[i;dd(2,tmp4);tmp(tmp4,2)];
-end;
-end
-    dd=[dd,[tmp3;tmp(tmp4,2)]];V(tmp(tmp4,3))=[];
-    [mdd,ndd]=size(dd);
-    kk=kk+1;
-end;
-S=ss;
-D=dd(1,:);
- \end{lstlisting}
+\begin{lstlisting}[language=matlab,caption={The matlab source code of ARIMA}]
+  clear all
+  clc
+  date=1751:2021;
+  rawdata=xlsread('land year std data.xls');
+  data=rawdata';
+  %rawdata=xlsread('land avg monthly.xlsx');
+  %data=rawdata([1800:3274],13)';
+  subplot(131)
+  plot(data,'b-','LineWidth',2)
+  xlabel('time')
+  ylabel('data')
+  set(gca,'fontsize',15)
+  subplot(132)
+  ddata = diff(data);
+  plot(ddata,'b-','LineWidth',2)
+  xlabel('time')
+  ylabel('first order difference of data')
+  set(gca,'fontsize',15)
+  subplot(133)
+  dddata = diff(data,2);
+  plot(dddata,'b-','LineWidth',2)
+  xlabel('time')
+  ylabel('second order difference of data')
+  
+  set(gca,'fontsize',15)
+  
+  % Stationarity Test of the raw data
+  d_adf=adftest(data)
+  d_kpss=kpsstest(data)
+  
+  %if adftest=0 or kpsstest=1 that means the data is not stationary
+  ddata = diff(data);
+  d1_adf = adftest(ddata)
+  d1_kpss = kpsstest(ddata)
+  
+  %if adftest=1 or kpsstest=0 that means the data is stationary
+  %ddata=data;
+  
+  % draw the ACF graph and PACF graph
+  figure
+  subplot(211)
+  autocorr(ddata,40)
+  ylabel('ACF')
+  set(gca,'fontsize',15)
+  
+  subplot(212)
+  parcorr(ddata,40)
+  ylabel('PACF')
+  set(gca,'fontsize',15)
+  
+  %% calculate the value of q and p
+  pmax = 4;
+  qmax = 4;
+  d = 1;
+  [p, q ]=findPQ(data,pmax,qmax,d);
+  
+  %% bulid model
+  %p = 3;q = 2;
+  Mdl = arima(p, 1, q);  %first order difference
+  EstMdl = estimate(Mdl,data');
+  %% predict model
+  step = 2000;
+  [forData,YMSE] = forecast(EstMdl,step,'Y0',data');  
+  lower = forData - 1.96*sqrt(YMSE); %the lower bound of the 95% confident interval
+  upper = forData + 1.96*sqrt(YMSE); %the upper bound of the 95% confident interval
+  
+  figure
+  plot(1:length(data),data)
+  hold on
+  plot((length(data)+1):length(data)+step,forData)
+  hold on
+  plot((length(data)+1):length(data)+step,lower)
+  plot((length(data)+1):length(data)+step,upper)
+  
+  function [p q] = findPQ(data,pmax,qmax,d)
+  data = reshape(data,length(data),1);
+  LOGL=zeros(pmax+1,qmax+1);
+  PQ=zeros(pmax+1,qmax+1);
+  for p=0:pmax
+      for q=0:qmax
+          model=arima(p,d,q);
+          [fit,~,logL]=estimate(model,data);  %strcture
+          LOGL(p+1,q+1)=logL;
+          PQ(p+1,q+1)=p+q;  %number of parameters
+      end
+  end
+  LOGL=reshape(LOGL,(pmax+1)*(qmax+1),1);
+  PQ=reshape(PQ,(pmax+1)*(qmax+1),1);
+  m2 = length(data);
+  [aic,bic]=aicbic(LOGL,PQ+1,m2);
+  aic0 = reshape(aic,(pmax+1),(qmax+1));
+  bic0= reshape(bic,(pmax+1),(qmax+1));
+  
+  aic1 = min(aic0(:));
+  index = aic1==aic0;
+  [pp qq] = meshgrid(0:pmax,0:qmax);
+  p0 = pp(index);
+  q0 = qq(index);
+  
+  aic2 = min(bic0(:));
+  index = aic2==bic0;
+  [pp qq] = meshgrid(0:pmax,0:qmax);
+  p1 = pp(index);
+  q1 = qq(index);
+  
+  if p0^2+q0^2> p1^2+q1^2
+      p = p1;
+      q = q1;
+  else
+      p = p0;
+      q = q0;
+  end
+  end
+\end{lstlisting}
 
+\begin{lstlisting}[language=python, caption={The python source code of LSTM}]
+  import numpy as np
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  from tensorflow import keras
+  from tensorflow.keras import layers
+  from sklearn.preprocessing import MinMaxScaler
+  from keras import regularizers
+  
+  #### 数据处理部分 ####
+  
+  # 读入数据
+  google_stock = pd.read_excel('land year std data.xlsx')
+  # google_stock.tail()  # 查看部分数据
+  # google_stock.head()
+  
+  # 时间戳长度
+  time_stamp = 10  # 输入序列长度
+  
+  # 划分训练集与验证集
+  google_stock = google_stock[['std data']]
+  lt = 500
+  train = google_stock[0:272]
+  valid = google_stock[:]
+  test = google_stock[272:]
+  
+  # 归一化
+  scaler = MinMaxScaler(feature_range=(0, 1))
+  scaled_data = scaler.fit_transform(train)
+  x_train, y_train = [], []
+  
+  # 训练集切片
+  for i in range(time_stamp, len(train) - 5):
+      x_train.append(scaled_data[i - time_stamp:i])
+      y_train.append(scaled_data[i: i + 5])
+  
+  x_train, y_train = np.array(x_train), np.array(y_train).reshape(-1, 5)
+  
+  # 验证集切片
+  scaled_data = scaler.fit_transform(valid)
+  x_valid, y_valid = [], []
+  for i in range(time_stamp, len(valid) - 5):
+      x_valid.append(scaled_data[i - time_stamp:i])
+      y_valid.append(scaled_data[i: i + 5])
+  
+  x_valid, y_valid = np.array(x_valid), np.array(y_valid).reshape(-1, 5)
+  
+  # 测试集切片
+  scaled_data = scaler.fit_transform(test)
+  x_test, y_test = [], []
+  for i in range(time_stamp, len(test) - 5):
+      x_test.append(scaled_data[i - time_stamp:i])
+      y_test.append(scaled_data[i: i + 5])
+  
+  x_test, y_test = np.array(x_test), np.array(y_test).reshape(-1, 5)
+  #### 建模部分 ####
+  model = keras.Sequential()
+  model.add(layers.LSTM(64, return_sequences=True, input_shape=(x_train.shape[1:])))
+  model.add(layers.LSTM(64, return_sequences=True))
+  model.add(layers.LSTM(32))
+  model.add(layers.Dropout(0.1))
+  model.add(layers.Dense(5))
+  
+  model.compile(optimizer=keras.optimizers.Adam(), loss='mae', metrics=['accuracy'])
+  learning_rate_reduction = keras.callbacks.ReduceLROnPlateau(monitor='val_loss', patience=3, factor=0.7,
+                                                              min_lr=0.000000005)
+  
+  history = model.fit(x_train, y_train,
+                      batch_size=128,
+                      epochs=100,
+                      validation_data=(x_valid, y_valid),
+                      callbacks=[learning_rate_reduction])
+  
+  # loss变化趋势可视化
+  # plt.plot(history.history['loss'],label='training loss')
+  # plt.plot(history.history['val_loss'], label='val loss')
+  # plt.show()
+  closing_price = model.predict(x_test)
+  model.evaluate(x_test)
+  scaler.fit_transform(pd.DataFrame(valid['std data'].values))
+  
+  # 反归一化
+  closing_price = scaler.inverse_transform(closing_price.reshape(-1, 5)[:, 0].reshape(1, -1))  # 只取第一列
+  y_test = scaler.inverse_transform(y_test.reshape(-1, 5)[:, 0].reshape(1, -1))
+  
+  # 计算预测结果
+  rms = np.sqrt(np.mean(np.power((y_test[0:1, 5:] - closing_price[0:1, 5:]), 2)))
+  print(rms)
+  print(closing_price.shape)
+  print(y_test.shape)
+  
+  # 预测效果可视化
+  dict_data = {
+      'Predictions': closing_price.reshape(1, -1)[0],
+      'actual': y_test[0]
+  }
+  
+  
+  year =[]
+  for i in range(2022, 2022+1984):
+      year.append(i)
+  
+  data_pd = pd.DataFrame(dict_data)
+  plt.plot(year, data_pd[['Predictions']][0:5000])
+  
+  plt.xlabel('year')
+  plt.ylabel('temperature')
+  plt.title('Prediction of temperature')
+  # plt.plot(data_pd[['Predictions']],linewidth=1.2)
+  # figure = plt.figure(figsize=(10,10))
+  # axes = figure.add_subplot(111) #插入面板2
+  # axes.plot(data_pd[0:30])
+  # axes.set_xlabel('tick')
+  # axes.set_ylabel('price')
+  # axes.set_title('30tick')
+  # plt.show()
+  # plt.plot(data_pd[0:30])
+  dataframe = pd.DataFrame(data_pd[0:2000])
+  dataframe.to_excel('Q1.xlsx')
+  plt.savefig('./q1b', dpi=320)
+\end{lstlisting}
 
+\newpage
+\begin{lstlisting}[language=python, caption={The python source code of multiple analysis}]
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import statsmodels.api as sm
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import adfuller
+
+data = pd.read_csv('2022_APMCM_C_Data.csv',encoding='gb18030')
+data.head(10)
+
+data['dt'] = pd.to_datetime(data['dt'])
+data.index = data['dt']
+data['Year'] = data['dt'].dt.year
+data_2010 = data[data['Year']==2010][['AverageTemperature','City','Latitude','Longitude']]
+
+def clear_Latitude(s):
+    if 'N' in s:
+        return float(s.replace('N',''))
+    else:
+        return -float(s.replace('S',''))
+def clear_Longitude(s):
+    if 'E' in s:
+        return float(s.replace('E',''))
+    else:
+        return -float(s.replace('W',''))
+data_2010['Latitude'] = data_2010['Latitude'].apply(clear_Latitude)
+data_2010['Longitude'] = data_2010['Longitude'].apply(clear_Longitude)
+
+city_data_df = data_2010.groupby('City').mean()
+
+f, ax = plt.subplots(nrows=1, ncols=1, figsize=(8, 8))
+df = city_data_df
+shifted_cols = df.columns
+corrmat = df[shifted_cols].corr()
+
+sns.heatmap(corrmat, annot=True, vmin=-1, vmax=1, cmap='coolwarm_r')
+ax.set_title('position correlation', fontsize=16)
+plt.tight_layout()
+plt.savefig('fig/position correlation.png',dpi=300, bbox_inches = 'tight')
+plt.show()
+
+Y= city_data_df['AverageTemperature']
+X1 = city_data_df.drop(columns=['AverageTemperature'])
+X= sm.add_constant(X1)
+result = sm.OLS(Y,X).fit()
+result.summary()
+print(result.summary())
+
+China_data = pd.read_csv('clear_China_city_AvgTemperature.csv')
+China_data.head(10)
+China_data.index =pd.to_datetime(China_data['date'])
+Shanghai_data = China_data[China_data['City'] == 'Shanghai']
+Shanghai_data['AverageTemperature'][Shanghai_data['AverageTemperature']<-18]=np.nan
+
+Shanghai_data = Shanghai_data.fillna(method = 'ffill',axis=0)
+Shanghai_data.AverageTemperature.plot(figsize=(20, 5))
+plt.xlabel('Average Temperature')
+plt.title('Average Temperature in Shanghai')
+plt.savefig('fig/Shanghai historical temperature .png',dpi=300, bbox_inches = 'tight')
+plt.show()
+
+decomposition = seasonal_decompose(Shanghai_data['AverageTemperature'], model='additive', period=365, extrapolate_trend='freq')
+fig, axs = plt.subplots(4, figsize=(12, 6))
+fig.suptitle('Time series decomposition')
+decomposition.observed.plot(ax=axs[0])
+decomposition.trend.plot(ax=axs[1])
+decomposition.seasonal.plot(ax=axs[2])
+decomposition.resid.plot(ax=axs[3])
+axs[0].set_ylabel('Observed')
+axs[1].set_ylabel('Trend')
+axs[2].set_ylabel('Seasonal')
+axs[3].set_ylabel('Residual')
+plt.subplots_adjust( hspace=1 )
+plt.savefig('fig/seasonal.png',dpi=300, bbox_inches = 'tight')
+
+adf_test = adfuller(decomposition.resid)
+print(f"p-value = {adf_test[1]}")
+\end{lstlisting}
+
+\begin{lstlisting}[language=matlab, caption={The matlab source code of GRA}]
+% Grey relation analysis
+clear all;close all;clc
+    
+zongshouru = [3439, 4002, 4519, 4995, 5566];
+daxuesheng = [341, 409, 556, 719, 903];
+congyerenyuan = [183, 196, 564, 598, 613];
+xingjifandian = [3248, 3856, 6029, 7358, 8880];
+
+filename='./total (c).xlsx';
+dt=xlsread(filename,'Sheet2','A2:I32');
+
+yr=reshape(dt(:,1),1,31)
+fr=reshape(dt(:,2),1,31)
+c2=reshape(dt(:,3),1,31)
+mi=reshape(dt(:,4),1,31)
+pl=reshape(dt(:,5),1,31)
+pd=reshape(dt(:,6),1,31)
+td=reshape(dt(:,7),1,31)
+al=reshape(dt(:,8),1,31)
+tp=reshape(dt(:,9),1,31)
+
+x0=tp
+x1=fr
+x2=c2
+x3=mi
+x4=pl
+x5=pd
+x6=td
+x7=al
+% normalization
+x0 = x0 ./ x0(1);
+x1 = x1 ./ x1(1);
+x2 = x2 ./ x2(1);
+x3 = x3 ./ x3(1);
+x4 = x4 ./ x4(1);
+x5 = x5 ./ x5(1);
+x6 = x6 ./ x6(1);
+x7 = x7 ./ x7(1);
+
+% global min and max
+global_min = min(min(abs([x1; x2; x3;x4;x5;x6;x7] - repmat(x0, [7, 1]))));
+global_max = max(max(abs([x1; x2; x3;x4;x5;x6;x7] - repmat(x0, [7, 1]))));   
+%set rho
+rho = 0.5;
+%calculate zeta relation coefficients
+zeta_1 = (global_min + rho * global_max) ./ (abs(x0 - x1) + rho * global_max);
+zeta_2 = (global_min + rho * global_max) ./ (abs(x0 - x2) + rho * global_max);
+zeta_3 = (global_min + rho * global_max) ./ (abs(x0 - x3) + rho * global_max);
+zeta_4 = (global_min + rho * global_max) ./ (abs(x0 - x4) + rho * global_max);
+zeta_5 = (global_min + rho * global_max) ./ (abs(x0 - x5) + rho * global_max);
+zeta_6 = (global_min + rho * global_max) ./ (abs(x0 - x6) + rho * global_max);
+zeta_7 = (global_min + rho * global_max) ./ (abs(x0 - x7) + rho * global_max);
+
+%show
+figure;
+plot(x0, 'ro-' )
+hold on
+plot(x1, 'b*-')
+hold on
+plot(x2, 'g*-')
+hold on
+plot(x3, 'c*-')
+hold on
+plot(x4, 'm*-')
+hold on
+plot(x5, 'y*-')
+hold on
+plot(x6, 'k*-')
+hold on
+plot(x7, 'r*-')
+legend('temperature', 'forest', 'CO2', 'marco ind', 'population', 'products', 'trade', 'agricultral land')
+    
+figure;
+plot(zeta_1, 'b*-' )
+hold on
+plot(zeta_2, 'g*-')
+hold on
+plot(zeta_3, 'c*-')
+hold on
+plot(zeta_4, 'm*-')
+hold on
+plot(zeta_5, 'y*-')
+hold on
+plot(zeta_6, 'k*-')
+hold on
+plot(zeta_7, 'r*-')
+hold on
+legend('forest', 'CO2', 'marco ind', 'population', 'products', 'trade', 'agricultral land')
+\end{lstlisting}
 \end{document} 
